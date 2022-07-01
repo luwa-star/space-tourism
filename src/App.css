@@ -1,38 +1,273 @@
 .App {
-  text-align: center;
+    text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+    width: 100%;
+    height: 100vh;
+    position: relative;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navbar {
+    width: 100vw;
+    height: 5rem;
+    /* padding: 1rem; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.logoContainer {
+    margin-left: 2rem;
+    width: 56px;
+    height: 56px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.logo {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background: url("../assets/shared/logo.svg") no-repeat;
+    background-position: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navSeparator {
+    display: none;
+}
+
+.nav-menu {
+    width: 60%;
+    padding-top: 5rem;
+    position: absolute;
+    top: 0;
+    right: -100%;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    background-color: var(--opaque_white);
+    backdrop-filter: blur(5rem);
+    -webkit-backdrop-filter: blur(5rem);
+}
+
+.open {
+    right: 0;
+}
+
+
+/* .nav-menu {
+    display: none;
+} */
+
+.nav-Item {
+    width: 100%;
+    padding-left: 2rem;
+    padding-bottom: 1rem;
+    list-style: none;
+    position: relative;
+}
+
+.nav-link {
+    display: block;
+    width: 100%;
+    text-transform: uppercase;
+    text-align: start;
+    color: var(--white);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1rem;
+    transition: 0.3ms all ease-in-out;
+}
+
+.nav-link.active {
+    border-right: 2px solid var(--white);
+}
+
+.nav-link:hover {
+    border-right: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.nav-linkSpan {
+    margin-right: 0.4rem;
+}
+
+.bar {
+    background-color: var(--white);
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.hamburger {
+    display: block;
+    cursor: pointer;
+    margin-right: 2rem;
+}
+
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+.homeBg {
+    background: url("../assets/home/background-home-mobile.jpg") no-repeat;
+    background-size: cover;
+}
+
+.destinationBg {
+    background: url("../assets/destination/background-destination-mobile.jpg") no-repeat;
+    background-size: cover;
+}
+
+.crewBg {
+    background: url("../assets/crew/background-crew-mobile.jpg") no-repeat;
+    background-size: cover;
+}
+
+.techBg {
+    background: url("../assets/technology/background-technology-mobile.jpg") no-repeat;
+    background-size: cover;
+}
+
+@media (min-width: 768px) {
+    .logo {
+        width: 3rem;
+        height: 3rem;
+    }
+    .nav-menu {
+        position: relative;
+        right: 0;
+        width: 30rem;
+        height: 100%;
+        padding: 0rem 2rem;
+        display: inline-flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .nav-Item {
+        width: auto;
+        height: 100%;
+        padding-left: 0rem;
+        padding-bottom: 0rem;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .nav-link {
+        width: auto;
+        text-align: center;
+        border: none;
+    }
+    .nav-linkSpan {
+        display: none;
+    }
+    .nav-link::before {
+        content: "";
+        width: 100%;
+        height: 2px;
+        background-color: var(--white);
+        position: absolute;
+        bottom: 0;
+        opacity: 0;
+        transition: 0.3ms all ease-in-out;
+    }
+    .nav-link.active {
+        border: none;
+    }
+    .nav-link:hover {
+        border: none;
+    }
+    .nav-link:hover:before {
+        opacity: 0.5;
+    }
+    .nav-link.active::before {
+        opacity: 1;
+    }
+    .hamburger {
+        display: none;
+    }
+    .homeBg {
+        background: url("../assets/home/background-home-tablet.jpg") no-repeat;
+        background-size: cover;
+    }
+    .destinationBg {
+        background: url("../assets/destination//background-destination-tablet.jpg") no-repeat;
+        background-size: cover;
+    }
+    .crewBg {
+        background: url("../assets/crew/background-crew-tablet.jpg") no-repeat;
+        background-size: cover;
+    }
+    .techBg {
+        background: url("../assets/technology/background-technology-tablet.jpg") no-repeat;
+        background-size: cover;
+    }
+}
+
+@media (min-width: 1200px) {
+    .navbar {
+        padding-top: 1rem;
+    }
+    .navSeparator {
+        position: relative;
+        width: 27rem;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        height: 100%;
+        z-index: 1;
+    }
+    .nav-menu {
+        padding: 0 6rem;
+        width: 45rem;
+    }
+    .nav-linkSpan {
+        display: inline-flex;
+    }
+    .line {
+        position: absolute;
+        right: -3rem;
+        width: 25rem;
+        height: 0.7px;
+        background-color: var(--gray);
+    }
+    .homeBg {
+        background: url("../assets/home/background-home-desktop.jpg") no-repeat;
+        background-size: cover;
+    }
+    .destinationBg {
+        background: url("../assets/destination/background-destination-desktop.jpg") no-repeat;
+        background-size: cover;
+    }
+    .crewBg {
+        background: url("../assets/crew/background-crew-desktop.jpg") no-repeat;
+        background-size: cover;
+    }
+    .techBg {
+        background: url("../assets/technology/background-technology-desktop.jpg") no-repeat;
+        background-size: cover;
+    }
+}
+
+@media (min-width: 1440px) {
+    .line {
+        right: -8rem;
+        width: 30rem;
+        z-index: 2;
+    }
 }
