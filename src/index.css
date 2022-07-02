@@ -1,6 +1,7 @@
 :root {
     --black: #0B0D17;
     --white: #FFFFFF;
+    --hover_white: rgba(255, 255, 255, 0.5);
     /* --opaque_white: rgba(255, 255, 255, 0.1); */
     --opaque_white: rgba(255, 255, 255, 0.04);
     --gray: rgba(128, 128, 128, 0.858);
@@ -45,7 +46,7 @@ body {
     font-family: 'Barlow', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    color: white;
+    color: var(--grey);
 }
 
 code {

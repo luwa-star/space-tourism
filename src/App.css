@@ -8,8 +8,28 @@
     position: relative;
 }
 
+.homeBg {
+    background: url("../assets/home/background-home-mobile.jpg") no-repeat;
+    background-size: cover;
+}
+
+.destinationBg {
+    background: url("../assets/destination/background-destination-mobile.jpg") no-repeat;
+    background-size: cover;
+}
+
+.crewBg {
+    background: url("../assets/crew/background-crew-mobile.jpg") no-repeat;
+    background-size: cover;
+}
+
+.techBg {
+    background: url("../assets/technology/background-technology-mobile.jpg") no-repeat;
+    background-size: cover;
+}
+
 .navbar {
-    width: 100vw;
+    /* width: 100vw; */
     height: 5rem;
     /* padding: 1rem; */
     display: flex;
@@ -59,11 +79,6 @@
     right: 0;
 }
 
-
-/* .nav-menu {
-    display: none;
-} */
-
 .nav-Item {
     width: 100%;
     padding-left: 2rem;
@@ -80,7 +95,10 @@
     color: var(--white);
     font-family: 'Barlow Condensed', sans-serif;
     font-size: 1rem;
-    transition: 0.3ms all ease-in-out;
+    transition: 10ms all ease-in;
+    transition: 10ms all ease-in-out;
+    -webkit-transition: 10ms all ease-in-out;
+    -o-transition: 10ms all ease-in-out;
 }
 
 .nav-link.active {
@@ -123,27 +141,103 @@
     transform: translateY(-8px) rotate(-45deg);
 }
 
-.homeBg {
-    background: url("../assets/home/background-home-mobile.jpg") no-repeat;
-    background-size: cover;
+
+/* HOME SECTION =====================================*/
+
+.homeSection {
+    /* width: 100%; */
+    padding: 1.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.destinationBg {
-    background: url("../assets/destination/background-destination-mobile.jpg") no-repeat;
-    background-size: cover;
+.homeSection1 {
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-.crewBg {
-    background: url("../assets/crew/background-crew-mobile.jpg") no-repeat;
-    background-size: cover;
+.home-subHeading {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
-.techBg {
-    background: url("../assets/technology/background-technology-mobile.jpg") no-repeat;
-    background-size: cover;
+.home-heading {
+    padding: 1.5rem 0;
+    font-family: 'Bellefair', sans-serif;
+    font-size: 5rem;
+    line-height: 1.5;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--white);
+}
+
+.homeText {
+    font-size: 0.875rem;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.homeSection2 {
+    padding-top: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.homeLinkWrapper {
+    width: 12rem;
+    height: 12rem;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transition: 10ms all ease-in;
+    transition: 10ms all ease-in-out;
+    -webkit-transition: 10ms all ease-in-out;
+    -o-transition: 10ms all ease-in-out;
+}
+
+.homeLinkWrapper:hover {
+    background-color: var(--hover_white);
+}
+
+.homeLink {
+    width: 9rem;
+    height: 9rem;
+    border-radius: 50%;
+    background-color: var(--white);
+    text-decoration: none;
+    color: var(--black);
+    font-family: 'Bellefair', sans-serif;
+    font-size: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
 }
 
 @media (min-width: 768px) {
+    .destinationBg {
+        background: url("../assets/destination//background-destination-tablet.jpg") no-repeat;
+        background-size: cover;
+    }
+    .crewBg {
+        background: url("../assets/crew/background-crew-tablet.jpg") no-repeat;
+        background-size: cover;
+    }
+    .techBg {
+        background: url("../assets/technology/background-technology-tablet.jpg") no-repeat;
+        background-size: cover;
+    }
     .logo {
         width: 3rem;
         height: 3rem;
@@ -184,7 +278,10 @@
         position: absolute;
         bottom: 0;
         opacity: 0;
-        transition: 0.3ms all ease-in-out;
+        transition: 10ms all ease-in;
+        transition: 10ms all ease-in-out;
+        -webkit-transition: 10ms all ease-in-out;
+        -o-transition: 10ms all ease-in-out;
     }
     .nav-link.active {
         border: none;
@@ -205,21 +302,49 @@
         background: url("../assets/home/background-home-tablet.jpg") no-repeat;
         background-size: cover;
     }
-    .destinationBg {
-        background: url("../assets/destination//background-destination-tablet.jpg") no-repeat;
-        background-size: cover;
+    /* HOME SECTION =====================================*/
+    .homeSection1 {
+        padding: 4rem 6rem;
     }
-    .crewBg {
-        background: url("../assets/crew/background-crew-tablet.jpg") no-repeat;
-        background-size: cover;
+    .home-heading {
+        padding: 0;
+        font-size: 9.375rem;
     }
-    .techBg {
-        background: url("../assets/technology/background-technology-tablet.jpg") no-repeat;
-        background-size: cover;
+    .homeText {
+        width: 80%;
+        font-size: 1rem;
+    }
+    .homeSection2 {
+        padding-top: 8.5rem;
+    }
+    .homeLinkWrapper {
+        width: 16rem;
+        height: 16rem;
+    }
+    .homeLink {
+        width: 13rem;
+        height: 13rem;
+        font-size: 2rem;
     }
 }
 
 @media (min-width: 1200px) {
+    .homeBg {
+        background: url("../assets/home/background-home-desktop.jpg") no-repeat;
+        background-size: cover;
+    }
+    .destinationBg {
+        background: url("../assets/destination/background-destination-desktop.jpg") no-repeat;
+        background-size: cover;
+    }
+    .crewBg {
+        background: url("../assets/crew/background-crew-desktop.jpg") no-repeat;
+        background-size: cover;
+    }
+    .techBg {
+        background: url("../assets/technology/background-technology-desktop.jpg") no-repeat;
+        background-size: cover;
+    }
     .navbar {
         padding-top: 1rem;
     }
@@ -246,21 +371,30 @@
         height: 0.7px;
         background-color: var(--gray);
     }
-    .homeBg {
-        background: url("../assets/home/background-home-desktop.jpg") no-repeat;
-        background-size: cover;
+    /* HOME SECTION =====================================*/
+    .homeSection {
+        width: 100%;
+        padding: 4rem;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
     }
-    .destinationBg {
-        background: url("../assets/destination/background-destination-desktop.jpg") no-repeat;
-        background-size: cover;
+    .homeSection1 {
+        padding: 0rem 0rem 0rem 4rem;
+        width: 60%;
+        align-items: flex-start;
     }
-    .crewBg {
-        background: url("../assets/crew/background-crew-desktop.jpg") no-repeat;
-        background-size: cover;
+    .homeSection2 {
+        padding-top: 6rem;
+        width: 30%;
+        height: 100%;
     }
-    .techBg {
-        background: url("../assets/technology/background-technology-desktop.jpg") no-repeat;
-        background-size: cover;
+    .home-heading {
+        text-align: left;
+    }
+    .homeText {
+        text-align: left;
+        width: 29rem;
     }
 }
 
