@@ -5,8 +5,14 @@ const Crew = () => {
   return (
     <div className="container crewBg">
       <Nav />
-      <main className="crewSection">
-        <h1>Crew</h1>
+      <main className="section">
+        <h1 className="heading">
+          <span className="headingSpan">01 </span> Meet your crew
+        </h1>
+        <div className="destinationContainer">
+          <div className="destinationDetails"></div>
+          <div className="destinationImage"></div>
+        </div>
       </main>
     </div>
   );

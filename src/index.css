@@ -10,21 +10,21 @@
 
 @font-face {
     font-family: 'Barlow';
-    src: url("../assets/Font/Barlow-Regular.ttf") format("truetype");
+    src: url("../src/assets/Font/Barlow-Regular.ttf") format("truetype");
     font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Barlow Condensed';
-    src: url("../assets/Font/BarlowCondensed-Regular.ttf") format("truetype");
+    src: url("../src/assets/Font/BarlowCondensed-Regular.ttf") format("truetype");
     font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Bellefair';
-    src: url("../assets/Font/Bellefair-Regular.ttf") format("truetype");
+    src: url("../src/assets/Font/Bellefair-Regular.ttf") format("truetype");
     font-weight: 400;
     font-style: normal;
 }
@@ -47,6 +47,7 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     color: var(--grey);
+    background-color: black;
 }
 
 code {
@@ -64,6 +65,12 @@ button {
     cursor: pointer;
 }
 
+h1,
+h2,
+h3 {
+    font-family: 'Barlow Condensed', sans-serif;
+}
+
 p {
     font-family: 'Barlow', sans-serif;
     font-size: 0.875rem;
@@ -72,5 +79,11 @@ p {
 @media (min-width: 768px) {
     p {
         font-size: 1rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    p {
+        font-size: 1.125rem;
     }
 }

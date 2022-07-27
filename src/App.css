@@ -4,27 +4,27 @@
 
 .container {
     width: 100%;
-    height: 100vh;
+    /* height: 100vh; */
     position: relative;
 }
 
 .homeBg {
-    background: url("../assets/home/background-home-mobile.jpg") no-repeat;
+    background: url("../src/assets/home/background-home-mobile.jpg") no-repeat;
     background-size: cover;
 }
 
 .destinationBg {
-    background: url("../assets/destination/background-destination-mobile.jpg") no-repeat;
+    background: url("../src/assets/destination/background-destination-mobile.jpg") no-repeat;
     background-size: cover;
 }
 
 .crewBg {
-    background: url("../assets/crew/background-crew-mobile.jpg") no-repeat;
+    background: url("../src/assets/crew/background-crew-mobile.jpg") no-repeat;
     background-size: cover;
 }
 
 .techBg {
-    background: url("../assets/technology/background-technology-mobile.jpg") no-repeat;
+    background: url("../src/assets/technology/background-technology-mobile.jpg") no-repeat;
     background-size: cover;
 }
 
@@ -51,7 +51,7 @@
     width: 2rem;
     height: 2rem;
     border-radius: 50%;
-    background: url("../assets/shared/logo.svg") no-repeat;
+    background: url("../src/assets/shared/logo.svg") no-repeat;
     background-position: center;
 }
 
@@ -87,7 +87,15 @@
     position: relative;
 }
 
-.nav-link {
+.planet-item {
+    width: auto;
+    padding-bottom: 0.5rem;
+    list-style: none;
+    position: relative;
+}
+
+.nav-link,
+.planet-nav {
     display: block;
     width: 100%;
     text-transform: uppercase;
@@ -99,6 +107,34 @@
     transition: 10ms all ease-in-out;
     -webkit-transition: 10ms all ease-in-out;
     -o-transition: 10ms all ease-in-out;
+}
+
+.planet-nav {
+    width: auto;
+    padding-bottom: 0.5rem;
+    position: relative;
+}
+
+.planet-nav::before {
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: var(--white);
+    position: absolute;
+    bottom: 0;
+    opacity: 0;
+    transition: 10ms all ease-in;
+    transition: 10ms all ease-in-out;
+    -webkit-transition: 10ms all ease-in-out;
+    -o-transition: 10ms all ease-in-out;
+}
+
+.planet-nav:hover {
+    opacity: 0.5;
+}
+
+.planet-nav.active::before {
+    opacity: 1;
 }
 
 .nav-link.active {
@@ -225,17 +261,135 @@
     text-transform: uppercase;
 }
 
+
+/* DESTINATION SECTION ============== */
+
+.section {
+    padding: 2rem;
+}
+
+.heading {
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: center;
+    letter-spacing: 0.3rem;
+    text-transform: uppercase;
+    color: var(--white);
+}
+
+.headingSpan {
+    color: var(--gray);
+    padding-right: 0.8rem;
+}
+
+.destinationImage,
+.destinationDetails {
+    width: 100%;
+}
+
+.destinationImage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.destinationDetails {
+    padding-top: 1.5rem;
+}
+
+.img {
+    width: 11.25rem;
+    height: 11.25rem;
+}
+
+.destinationContainer {
+    padding: 2rem 0rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.DestinationNav-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.DesinationNav {
+    width: 100%;
+    height: 2rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-around;
+    list-style-type: none;
+}
+
+.planetContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.planetDivider {
+    width: 100%;
+    height: 1px;
+    background-color: #383B4B;
+}
+
+.planetHeading {
+    padding-top: 1.5rem;
+    color: var(--white);
+    font-family: 'Bellefair', sans-serif;
+    font-size: 3.5rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.planetParagrapgh {
+    padding: 1rem 0rem 3rem;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.estimationWrapper {
+    padding-top: 2rem;
+    width: 14rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.distanceHeading,
+.estimate {
+    padding-bottom: 1rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    font-family: 'Barlow Condensed', sans-serif;
+}
+
+.estimate {
+    color: var(--white);
+    font-size: 1.75rem;
+    font-family: 'Bellefair', sans-serif;
+}
+
 @media (min-width: 768px) {
     .destinationBg {
-        background: url("../assets/destination//background-destination-tablet.jpg") no-repeat;
+        background: url("../src/assets/destination//background-destination-tablet.jpg") no-repeat;
         background-size: cover;
     }
     .crewBg {
-        background: url("../assets/crew/background-crew-tablet.jpg") no-repeat;
+        background: url("../src/assets/crew/background-crew-tablet.jpg") no-repeat;
         background-size: cover;
     }
     .techBg {
-        background: url("../assets/technology/background-technology-tablet.jpg") no-repeat;
+        background: url("../src/assets/technology/background-technology-tablet.jpg") no-repeat;
         background-size: cover;
     }
     .logo {
@@ -253,7 +407,8 @@
         justify-content: space-between;
         align-items: center;
     }
-    .nav-Item {
+    .nav-Item,
+    .planet-item {
         width: auto;
         height: 100%;
         padding-left: 0rem;
@@ -262,7 +417,8 @@
         align-items: center;
         justify-content: center;
     }
-    .nav-link {
+    .nav-link,
+    .planet-nav {
         width: auto;
         text-align: center;
         border: none;
@@ -299,7 +455,7 @@
         display: none;
     }
     .homeBg {
-        background: url("../assets/home/background-home-tablet.jpg") no-repeat;
+        background: url("../src/assets/home/background-home-tablet.jpg") no-repeat;
         background-size: cover;
     }
     /* HOME SECTION =====================================*/
@@ -326,23 +482,48 @@
         height: 13rem;
         font-size: 2rem;
     }
+    /* DESTINATION SECTION ================= */
+    .section {
+        padding: 2rem 3rem;
+    }
+    .heading {
+        font-size: 1.25rem;
+        line-height: 1.5;
+        text-align: left;
+    }
+    .img {
+        width: 18.75rem;
+        height: 18.75rem;
+    }
+    .DesinationNav {
+        width: 50%;
+    }
+    .estimationWrapper {
+        width: 23rem;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .planetHeading {
+        font-size: 5rem;
+    }
 }
 
 @media (min-width: 1200px) {
     .homeBg {
-        background: url("../assets/home/background-home-desktop.jpg") no-repeat;
+        background: url("../src/assets/home/background-home-desktop.jpg") no-repeat;
         background-size: cover;
     }
     .destinationBg {
-        background: url("../assets/destination/background-destination-desktop.jpg") no-repeat;
+        background: url("../src/assets/destination/background-destination-desktop.jpg") no-repeat;
         background-size: cover;
     }
     .crewBg {
-        background: url("../assets/crew/background-crew-desktop.jpg") no-repeat;
+        background: url("../src/assets/crew/background-crew-desktop.jpg") no-repeat;
         background-size: cover;
     }
     .techBg {
-        background: url("../assets/technology/background-technology-desktop.jpg") no-repeat;
+        background: url("../src/assets/technology/background-technology-desktop.jpg") no-repeat;
         background-size: cover;
     }
     .navbar {
@@ -395,6 +576,49 @@
     .homeText {
         text-align: left;
         width: 29rem;
+    }
+    /* DESTINATION SECTION ============== */
+    .section {
+        padding: 2rem 6rem;
+    }
+    .heading {
+        font-size: 1.75rem;
+        line-height: 1.5;
+    }
+    .destinationContainer {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .destinationImage {
+        width: 40%;
+    }
+    .img {
+        width: 23rem;
+        height: 23rem;
+    }
+    .destinationDetails {
+        padding-top: 0;
+        width: 40%;
+    }
+    .DestinationNav-container {
+        justify-content: flex-start;
+    }
+    .planetContainer {
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    .planetHeading {
+        font-size: 6rem;
+        text-align: left;
+    }
+    .planetParagrapgh {
+        text-align: left;
+    }
+    .distanceHeading,
+    .estimate {
+        text-align: left;
     }
 }
 
