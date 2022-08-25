@@ -26,11 +26,11 @@ Users should be able to:
 ![](./src/assets/Screenshots/-Space-Tourism-web.png)
 ![](./src/assets/Screenshots/destination-Space-Tourism.png)
 ![](./src/assets/Screenshots/crew-Space-Tourism.png)
-![](./src/assets/Screenshots/tech-Space-Tourism.png)
+
 
 ### Links
 
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Add live site URL here](http://space-tourism-flame-psi.vercel.app/)
 
 ### Built with
 
