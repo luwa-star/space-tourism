@@ -30,7 +30,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Add live site URL here](http://space-tourism-flame-psi.vercel.app/)
+- Live Site URL: [Space  tourism site](http://space-tourism-flame-psi.vercel.app/)
 
 ### Built with
 
