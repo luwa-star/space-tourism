@@ -1,10 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Nav from "./Nav";
 const Home = () => {
   return (
     <div className="container homeBg">
-      <Nav />
       <main className="homeSection">
         <div className="homeSection1">
           <h1 className="home-subHeading"> So, you want to travel to</h1>

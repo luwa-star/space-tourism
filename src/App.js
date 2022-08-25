@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-// import Nav from "./components/Nav";
+import Nav from "./components/Nav";
 import Home from "./components/Home";
 import Destination from "./components/Destination";
 import Moon from "./components/Moon";
@@ -13,6 +13,7 @@ import "./App.css";
 function App() {
   return (
     <div className="App">
+      <Nav />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/destination" element={<Destination />}>

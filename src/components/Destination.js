@@ -1,6 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
 import { NavLink, Outlet } from "react-router-dom";
-import Nav from "./Nav";
 import moon from "../assets/destination/image-moon.webp";
 import mars from "../assets/destination/image-mars.webp";
 import europa from "../assets/destination/image-europa.webp";
@@ -39,7 +38,6 @@ const Destination = () => {
 
   return (
     <div className="container destinationBg">
-      <Nav />
       <main className="section">
         <h1 className="heading">
           <span className="headingSpan">01 </span> Pick your destination

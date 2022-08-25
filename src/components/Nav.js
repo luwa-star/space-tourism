@@ -7,6 +7,9 @@ const Nav = () => {
   const toggleMenu = () => {
     setExpandNav(!expandNav);
   };
+  const closeNav = () => {
+    setExpandNav(false);
+  };
   return (
     <div className="navbar">
       <div className="logoContainer">
@@ -17,22 +20,22 @@ const Nav = () => {
       </div>
       <ul className={expandNav ? "nav-menu open" : "nav-menu"}>
         <li className="nav-Item">
-          <NavLink to="/" className="nav-link">
+          <NavLink to="/" className="nav-link" onClick={closeNav}>
             <span className="nav-linkSpan">00</span>Home
           </NavLink>
         </li>
         <li className="nav-Item">
-          <NavLink to="/destination" className="nav-link">
+          <NavLink to="/destination" className="nav-link" onClick={closeNav}>
             <span className="nav-linkSpan">01</span>Destination
           </NavLink>
         </li>
         <li className="nav-Item">
-          <NavLink to="/crew" className="nav-link">
+          <NavLink to="/crew" className="nav-link" onClick={closeNav}>
             <span className="nav-linkSpan">02</span>Crew
           </NavLink>
         </li>
         <li className="nav-Item">
-          <NavLink to="/technology" className="nav-link">
+          <NavLink to="/technology" className="nav-link" onClick={closeNav}>
             <span className="nav-linkSpan">03</span>Technology
           </NavLink>
         </li>
